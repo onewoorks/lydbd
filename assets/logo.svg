@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#6B4423" stroke-width="4"/>
+  <text x="100" y="55" font-family="serif" font-size="20" font-weight="400" text-anchor="middle" fill="#6B4423">LYD</text>
+  <text x="100" y="100" font-family="serif" font-size="42" font-weight="700" font-style="italic" text-anchor="middle" fill="#6B4423">Batter</text>
+  <text x="100" y="130" font-family="serif" font-size="42" font-weight="700" font-style="italic" text-anchor="middle" fill="#6B4423">&amp;Dough</text>
+  <text x="100" y="170" font-family="serif" font-size="18" font-weight="400" text-anchor="middle" fill="#6B4423">BAKERY</text>
+</svg>

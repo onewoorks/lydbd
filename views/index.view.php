@@ -13,6 +13,69 @@ include __DIR__ . '/header.php';
       <div class="right muted">Items change daily — keep your stock updated via admin links.</div>
     </section>
 
+    <!-- Event Section -->
+    <section class="event-banner">
+      <div class="event-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track" id="event-carousel-track">
+            <div class="carousel-slide active">
+              <img src="<?= url('assets/placeholder.svg') ?>" alt="Event Photo 1" class="event-photo">
+            </div>
+            <div class="carousel-slide">
+              <img src="<?= url('assets/placeholder.svg') ?>" alt="Event Photo 2" class="event-photo">
+            </div>
+            <div class="carousel-slide">
+              <img src="<?= url('assets/placeholder.svg') ?>" alt="Event Photo 3" class="event-photo">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="event-carousel-dots"></div>
+      </div>
+      <div class="event-details">
+        <h3>Join Us at Our Next Event!</h3>
+        <div class="event-info-grid">
+          <div class="event-info">
+            <strong>📅 Date:</strong> Saturday, 23 Nov 2025
+          </div>
+          <div class="event-info">
+            <strong>📍 Location:</strong> Central Park Weekend Market
+          </div>
+          <div class="event-info">
+            <strong>⏰ Time:</strong> 8:00 AM - 2:00 PM
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+    (function(){
+      const track = document.getElementById('event-carousel-track');
+      const dotsContainer = document.getElementById('event-carousel-dots');
+      if(!track || !dotsContainer) return;
+      const slides = track.querySelectorAll('.carousel-slide');
+      let currentIndex = 0;
+      // Create dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+      });
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      function goToSlide(index){
+        slides[currentIndex].classList.remove('active');
+        dots[currentIndex].classList.remove('active');
+        currentIndex = index;
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+      }
+      function nextSlide(){
+        goToSlide((currentIndex + 1) % slides.length);
+      }
+      // Auto-advance every 4 seconds
+      setInterval(nextSlide, 4000);
+    })();
+    </script>
+
     <main class="product-grid">
       <?php if (empty($products)): ?>
         <div class="card"><div class="card-body"><p>No items available today. Check again tomorrow.</p></div></div>

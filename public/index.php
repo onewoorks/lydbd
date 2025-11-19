@@ -16,6 +16,8 @@ $router->get('/toggle/{id}', function($params){
     return $ctrl->toggle($id, $token, $action);
 });
 $router->get('/about', function(){ $pageTitle='About'; $siteTitle='About Us'; $siteSubtitle=''; include __DIR__ . '/../views/header.php'; echo '<main class="admin-card" style="margin-top:18px"> <p>We bake fresh daily using high-quality ingredients.</p></main>'; include __DIR__ . '/../views/footer.php'; });
+$router->get('/menu', function(){ include __DIR__ . '/../views/menu.view.php'; });
+$router->get('/gallery', function(){ include __DIR__ . '/../views/gallery.view.php'; });
 $router->get('/faq', function(){ $pageTitle='FAQ'; $siteTitle='FAQ'; $siteSubtitle='How to order'; include __DIR__ . '/../views/header.php'; echo '<main class="admin-card" style="margin-top:18px"> <h3>How do I order?</h3><p>Open a product detail and choose package and flavour (if available). Click "Order via WhatsApp" to send us your order with details.</p></main>'; include __DIR__ . '/../views/footer.php'; });
 
 $router->get('/order', function(){
