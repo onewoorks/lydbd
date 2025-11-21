@@ -1,9 +1,8 @@
 # Enable rewrite engine
 RewriteEngine On
 
-# Redirect to public folder if accessing from root
-RewriteCond %{REQUEST_URI} !^/public/
-RewriteRule ^(.*)$ public/$1 [L]
+# Set base directory
+RewriteBase /
 
 # If the requested file/folder exists, serve it directly
 RewriteCond %{REQUEST_FILENAME} !-f

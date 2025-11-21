@@ -13,7 +13,9 @@ define('PEXELS_API_KEY', '');
 // Optional: base URL of your site, used for generating share links in admin
 // If you run locally for testing, set to http://localhost:8000 or your host
 if (!defined('BASE_URL')) {
-    define('BASE_URL', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . rtrim(dirname($_SERVER['SCRIPT_NAME']), '\\/') . '/');
+    $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    define('BASE_URL', $protocol . '://' . $host . '/');
 }
 
 ?>
