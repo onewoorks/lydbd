@@ -1,5 +1,10 @@
 <?php
 // Front controller (public entry) — routes managed here
+
+// Debug: Uncomment to see request info
+// error_log("REQUEST_URI: " . $_SERVER['REQUEST_URI']);
+// error_log("SCRIPT_NAME: " . $_SERVER['SCRIPT_NAME']);
+
 require_once __DIR__ . '/../app/bootstrap.php';
 require_once __DIR__ . '/../app/Router.php';
 
