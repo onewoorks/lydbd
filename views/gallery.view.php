@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'Gallery';
-$siteTitle = 'Gallery';
+$pageTitle = 'Galeri';
+$siteTitle = 'Galeri';
 $siteSubtitle = '';
 include __DIR__ . '/header.php';
 ?>
@@ -38,33 +38,30 @@ include __DIR__ . '/header.php';
 
 <div class="photo-gallery">
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Artisan Bread" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Roti Artisan" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Cookies" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Biskut" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Croissants" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Kroisan" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Cakes" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Kek" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Baguettes" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Baguette" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Pastries" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Pastri" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Fresh Bakes" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Pastri Artisan" class="gallery-photo">
   </div>
   <div class="gallery-item">
-    <img src="<?= url('assets/placeholder.svg') ?>" alt="Event" class="gallery-photo">
+    <img src="<?= url('assets/placeholder.svg') ?>" alt="Acara" class="gallery-photo">
   </div>
 </div>
-
-<?php include __DIR__ . '/footer.php'; ?>
-
 
 <style>
 .gallery-hero {
@@ -236,10 +233,10 @@ include __DIR__ . '/header.php';
 </script>
 
 <div class="gallery-cta">
-  <h3>Love What You See?</h3>
-  <p>Order fresh baked goods today or contact us for custom creations</p>
-  <a href="<?= url('/') ?>" class="btn">Browse Today's Fresh Bakes</a>
-  <a href="<?= url('/menu') ?>" class="btn secondary" style="margin-left:10px">View Full Menu</a>
+  <h3>Suka Apa Yang Anda Lihat?</h3>
+  <p>Pesan barangan bakeri segar hari ini atau hubungi kami untuk pesanan khas</p>
+  <a href="<?= url('/') ?>" class="btn">Layari Pastri Artisan Hari Ini</a>
+  <a href="<?= url('/menu') ?>" class="btn secondary" style="margin-left:10px">Lihat Menu Penuh</a>
 </div>
 
 <?php include __DIR__ . '/footer.php'; ?>

@@ -4,9 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title><?= htmlspecialchars($pageTitle ?? 'Bakery') ?></title>
+  <link rel="icon" type="image/x-icon" href="<?= url('assets/logo.ico') ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= url('assets/style.css') ?>">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
+<body<?= (isset($isIndexPage) && $isIndexPage) ? ' class="index-page"' : '' ?>>
   <div class="container">
     <header class="site-header">
       <div class="header-top">
@@ -20,13 +25,13 @@
         <span class="hamburger-box"><span class="hamburger-inner"></span></span>
       </button>
       <nav class="header-nav" id="site-nav">
-        <a href="<?= url('/') ?>">Fresh Bakes</a>
-        <a href="<?= url('menu') ?>">Menu</a>
-        <a href="<?= url('gallery') ?>">Gallery</a>
-        <a href="<?= url('about') ?>">About</a>
-        <a href="<?= url('faq') ?>">FAQ</a>
+        <a href="<?= url('/') ?>">Pastri Hari Ini</a>
+        <!-- <a href="<?= url('menu') ?>">Menu</a> -->
+        <a href="<?= url('gallery') ?>">Galeri</a>
+        <a href="<?= url('about') ?>">Tentang</a>
+        <a href="<?= url('faq') ?>">Soalan Lazim</a>
         <span class="cart-badge">
-          <a class="btn" href="<?=url('/order')?>">Order</a>
+          <a class="btn" href="<?= url('order') ?>">Pesan</a>
           <span class="count" id="lydia-cart-count" style="display:none">0</span>
         </span>
       </nav>
@@ -38,20 +43,5 @@
         }
         window.addEventListener('lydia:cart:changed', function(e){ updateCartCount(e.detail.total); });
         document.addEventListener('DOMContentLoaded', function(){ if(window.LydiaCart) updateCartCount(window.LydiaCart.getTotalItems()); });
-        
-        // Scroll detection for header
-        (function(){
-          const header = document.querySelector('.site-header');
-          let lastScroll = 0;
-          window.addEventListener('scroll', function(){
-            const currentScroll = window.pageYOffset;
-            if(currentScroll > 100){
-              header.classList.add('scrolled');
-            } else {
-              header.classList.remove('scrolled');
-            }
-            lastScroll = currentScroll;
-          });
-        })();
       </script>
     </header>

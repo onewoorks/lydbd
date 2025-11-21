@@ -7,12 +7,12 @@
   function addToCart(item){
     var cart = loadCart();
     item.qty = parseInt(item.qty||1);
-    var found = cart.find(c=>c.id===item.id && c.package===item.package && c.flavour===item.flavour);
+    var found = cart.find(c=>c.id===item.id && c.package===item.package && c.flavour===item.flavour && c.extras===item.extras);
     if(found) found.qty = (parseInt(found.qty||0) + item.qty);
     else cart.push(item);
     saveCart(cart);
     dispatchCartChanged();
-    showToast((item.name||'Item')+' — '+item.qty+' added');
+    showToast((item.name||'Item')+' — '+item.qty+' ditambah');
     return cart;
   }
   function removeFromCart(index){
@@ -22,17 +22,29 @@
   function getTotalItems(){ var cart = loadCart(); return cart.reduce(function(s,i){ return s + (parseInt(i.qty)||0); }, 0); }
   function buildWhatsAppMessage(){
     var cart = loadCart(); if (!cart.length) return '';
-    var lines = ['New order from website:'];
+    var lines = ['Pesanan baru daripada laman web:', ''];
     var total = 0;
     cart.forEach(function(it, idx){
       var price = Number(it.price || 0);
-      var line = (idx+1)+'. '+it.name+' - '+(it.packageLabel || '')+' x'+it.qty+' - $'+(price*it.qty).toFixed(2);
-      if(it.flavour) line += ' ('+it.flavour+')';
-      if(it.note) line += ' - Note: '+it.note;
+      var line = (idx+1)+'. '+it.name;
       lines.push(line);
+      if(it.flavour) {
+        lines.push('- '+it.flavour+' '+(it.packageLabel || '')+' x '+it.qty);
+      } else {
+        lines.push('- '+(it.packageLabel || '')+' x '+it.qty);
+      }
+      if(it.extras) {
+        var extrasArr = it.extras.split(', ');
+        extrasArr.forEach(function(ex){
+          lines.push('- '+ex);
+        });
+      }
+      lines.push('- RM'+(price*it.qty).toFixed(2));
+      if(it.note) lines.push('- Catatan: '+it.note);
+      lines.push('');
       total += price*it.qty;
     });
-    lines.push('Total: $'+total.toFixed(2));
+    lines.push('Jumlah: RM'+total.toFixed(2));
     return lines.join('\n');
   }
 

@@ -1,0 +1,138 @@
+[
+    {
+        "id": "scone",
+        "name": "Premium Scone",
+        "price": 40.00,
+        "description": "Nikmati scones gebu dan segar yang cair di mulut. pilihan ideal untuk sarapan atau minum petang, enak dinikmati begitu saja atau bersama jem dan krim.",
+        "images": [
+            "assets/images/scones.jpg"
+        ],
+        "available": true,
+        "options": {
+            "sizes": [
+                {
+                    "label": "Normal Size",
+                    "flavours": [
+                        {
+                            "label": "Classic Butter",
+                            "availablePackages": ["12 pcs"]
+                        },
+                        {
+                            "label": "Cranberry",
+                            "availablePackages": ["12 pcs"]
+                        },
+                        {
+                            "label": "Chocolate Chip",
+                            "availablePackages": ["12 pcs"]
+                        },
+                        {
+                            "label": "Cheese",
+                            "availablePackages": ["8 pcs (L)"]
+                        }
+                    ],
+                    "packages": [
+                        {
+                            "label": "12 pcs",
+                            "flavours": {
+                                "Classic Butter": 40,
+                                "Cranberry": 42,
+                                "Chocolate Chip": 45
+                            }
+                        },
+                        {
+                            "label": "8 pcs (L)",
+                            "flavours": {
+                                "Cheese": 40
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Mini Size",
+                    "flavours": [
+                        {
+                            "label": "Classic Butter",
+                            "availablePackages": ["35 pcs"]
+                        },
+                        {
+                            "label": "Cranberry",
+                            "availablePackages": ["35 pcs"]
+                        }
+                    ],
+                    "packages": [
+                        {
+                            "label": "35 pcs",
+                            "flavours": {
+                                "Classic Butter": 45,
+                                "Cranberry": 50
+                            }
+                        }
+                    ]
+                }
+            ],
+            "extras": [
+                {
+                    "label": "Jem Strawberry",
+                    "price": 3
+                },
+                {
+                    "label": "Cream Cheese",
+                    "price": 3
+                }
+            ]
+        }
+    },
+    {
+        "id": "cinnamon-roll",
+        "name": "Cinnamon Roll",
+        "price": 2.5,
+        "description": "Lembut dan wangi, berlapis kayu manis manis yang memikat setiap gigitan.",
+        "images": [
+            "assets/images/cinnamonroll.jpeg"
+        ],
+        "available": true,
+        "options": {
+            "packages": [
+                {
+                    "label": "24 pcs",
+                    "count": 24,
+                    "price": 45
+                }
+            ]
+        }
+    },
+    {
+        "id": "bagels",
+        "name": "Bagels",
+        "price": 4,
+        "description": "Bagel kenyal dengan pelbagai perisa menarik - sesuai untuk sarapan atau snek. Nikmatilah dipanggang dengan mentega, krim keju, atau isian pilihan anda. Min order 3 unit, boleh dicampur perisa.",
+        "images": [
+            "assets/images/bagels.jpg"
+        ],
+        "available": true,
+        "options": {
+            "flavours": [
+                {
+                    "label": "Original Blueberry",
+                    "price": 1
+                },
+                {
+                    "label": "Everything",
+                    "price": 1
+                },
+                {
+                    "label": "Original",
+                    "price": 0
+                },
+                {
+                    "label": "Cheese",
+                    "price": 3
+                },
+                {
+                    "label": "Jalapeno Cheese",
+                    "price": 3
+                }
+            ]
+        }
+    }
+]

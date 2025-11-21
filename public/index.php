@@ -15,15 +15,15 @@ $router->get('/toggle/{id}', function($params){
     $ctrl = new AdminController(new ProductModel());
     return $ctrl->toggle($id, $token, $action);
 });
-$router->get('/about', function(){ $pageTitle='About'; $siteTitle='About Us'; $siteSubtitle=''; include __DIR__ . '/../views/header.php'; echo '<main class="admin-card" style="margin-top:18px"> <p>We bake fresh daily using high-quality ingredients.</p></main>'; include __DIR__ . '/../views/footer.php'; });
+$router->get('/about', function(){ include __DIR__ . '/../about.php'; });
 $router->get('/menu', function(){ include __DIR__ . '/../views/menu.view.php'; });
 $router->get('/gallery', function(){ include __DIR__ . '/../views/gallery.view.php'; });
-$router->get('/faq', function(){ $pageTitle='FAQ'; $siteTitle='FAQ'; $siteSubtitle='How to order'; include __DIR__ . '/../views/header.php'; echo '<main class="admin-card" style="margin-top:18px"> <h3>How do I order?</h3><p>Open a product detail and choose package and flavour (if available). Click "Order via WhatsApp" to send us your order with details.</p></main>'; include __DIR__ . '/../views/footer.php'; });
+$router->get('/faq', function(){ include __DIR__ . '/../faq.php'; });
 
 $router->get('/order', function(){
-    $pageTitle = 'Your cart';
-    $siteTitle = 'Your order';
-    $siteSubtitle = 'Review your order and confirm before sending via WhatsApp.';
+    $pageTitle = 'Troli Anda';
+    $siteTitle = 'Troli Anda';
+    $siteSubtitle = 'Semak pesanan anda dan sahkan sebelum menghantar melalui WhatsApp.';
     include __DIR__ . '/../views/header.php';
     include __DIR__ . '/../views/order.view.php';
     include __DIR__ . '/../views/footer.php';

@@ -3,7 +3,7 @@ class ProductModel {
     protected $file;
 
     public function __construct($file = null) {
-        $this->file = $file ?: (defined('PRODUCTS_FILE') ? PRODUCTS_FILE : __DIR__ . '/../../products.json');
+        $this->file = $file ?: (defined('PRODUCTS_FILE') ? PRODUCTS_FILE : __DIR__ . '/../../data/products.json');
     }
 
     public function loadAll() {

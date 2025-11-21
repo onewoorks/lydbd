@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function(){
         if (!ok && navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(target.value || target.getAttribute('value'));
         }
-        btn.textContent = 'Copied';
-        setTimeout(function(){ btn.textContent = 'Copy'; }, 1500);
+        btn.textContent = 'Disalin';
+        setTimeout(function(){ btn.textContent = 'Salin'; }, 1500);
       }catch(e){
         console.warn('copy failed', e);
       }
@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', function(){
     btn.addEventListener('click', function(){
       var url = btn.getAttribute('data-share-url');
       if (navigator.share) {
-        navigator.share({title:document.title, text:'Toggle product availability', url:url}).catch(()=>{});
+        navigator.share({title:document.title, text:'Togol ketersediaan produk', url:url}).catch(()=>{});
       } else {
         // fallback: copy to clipboard
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(url).then(function(){
-            btn.textContent='Copied';
-            setTimeout(()=>btn.textContent='Share',1500);
+            btn.textContent='Disalin';
+            setTimeout(()=>btn.textContent='Kongsi',1500);
           });
         }
       }
@@ -43,16 +43,16 @@ document.addEventListener('DOMContentLoaded', function(){
   // Footer slogan rotation: cycle through an array of appetizing taglines every 2 minutes
   (function(){
     var slogans = [
-      'Freshly baked daily — warm, buttery treats waiting for you.',
-      'Warm from the oven — irresistible bites every morning.',
-      'Buttery, flaky, and baked with love.',
-      'Treat yourself today — hand-baked goodness.',
-      'Small bakery. Big flavour. Taste the difference.',
-      'Start your day with a slice of sunshine.',
-      'Hand-rolled, hand-baked, heart-approved.',
-      'Sweet, savory, and made for sharing.',
-      'From our oven to your hands — enjoy!',
-      'Crave-worthy bakes, baked fresh every day.'
+      'Dibakar segar setiap hari — hidangan hangat menanti anda.',
+      'Hangat dari ketuhar — gigitan yang sukar ditolak setiap pagi.',
+      'Bermentega, berlapis dan dibakar dengan kasih.',
+      'Manjakan diri anda hari ini — kebaikan buatan tangan.',
+      'Kedai roti kecil. Rasa besar. Rasai perbezaannya.',
+      'Mulakan hari anda dengan sepotong kebahagiaan.',
+      'Dibangunkan dengan tangan, dibakar dengan hati.',
+      'Manis dan masin, sesuai untuk dikongsi.',
+      'Dari ketuhar kami ke tangan anda — nikmati!',
+      'Kukisan yang memikat, dibakar segar setiap hari.'
     ];
     var el = document.getElementById('footer-slogan');
     if (!el) return;
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function(){
       if (closeBtn) return closeBtn;
       closeBtn = document.createElement('button');
       closeBtn.className = 'nav-close';
-      closeBtn.setAttribute('aria-label','Close menu');
+      closeBtn.setAttribute('aria-label','Tutup menu');
       closeBtn.innerHTML = '&times;';
       closeBtn.addEventListener('click', function(){ closeMenu(); });
       nav.appendChild(closeBtn);
@@ -211,4 +211,6 @@ document.addEventListener('DOMContentLoaded', function(){
     // close on ESC
     document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape' && nav.classList.contains('open')) closeMenu(); });
   })();
+
+    // Single-page smooth-scrolling removed — site uses separate pages now
 });

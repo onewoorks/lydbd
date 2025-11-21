@@ -24,7 +24,7 @@ if (!function_exists('unsplash_url')) {
 
 if (!function_exists('best_image_for')) {
     // Choose the best image URL for a product: local path if exists, Pexels if available, otherwise Unsplash
-    function best_image_for($productName, $localPath = null, $w = 1200, $h = 900) {
+    function best_image_for($productName, $localPath = null, $w = 900, $h = 900) {
         // 1) local file
         if ($localPath && file_exists(__DIR__ . '/../' . ltrim($localPath, '/'))) {
             return $localPath;

@@ -1,7 +1,7 @@
 <?php
 // Basic config for the lightweight product site
 // Change SECRET_TOKEN to a strong random value before deployment
-define('PRODUCTS_FILE', __DIR__ . '/products.json');
+define('PRODUCTS_FILE', __DIR__ . '/data/products.json');
 define('SECRET_TOKEN', 'change-this-secret-token');
 // Admin HTTP basic auth for protecting admin pages (change before deployment)
 define('ADMIN_USER', 'admin');

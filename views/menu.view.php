@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'Our Menu';
-$siteTitle = 'Our Menu';
-$siteSubtitle = 'All items we bake - fresh daily, made with love';
+$pageTitle = 'Menu Kami';
+$siteTitle = 'Menu Kami';
+$siteSubtitle = 'Semua item yang kami bakar - segar setiap hari, dibuat dengan kasih';
 include __DIR__ . '/header.php';
 ?>
 
@@ -127,38 +127,38 @@ include __DIR__ . '/header.php';
 </style>
 
 <div class="menu-hero">
-  <h2>🥖 Our Baked Goods</h2>
-  <p>Everything we make is baked fresh daily with premium ingredients and lots of love</p>
+  <h2>🥖 Barangan Bakeri Kami</h2>
+  <p>Semua yang kami buat dibakar segar setiap hari dengan bahan berkualiti dan penuh kasih</p>
 </div>
 
 <div class="menu-categories">
   <!-- Breads Category -->
   <section class="menu-category">
-    <h3>🍞 Artisan Breads</h3>
-    <p class="category-desc">Freshly baked breads with crispy crust and soft interior</p>
+    <h3>🍞 Roti Artisan</h3>
+    <p class="category-desc">Roti segar yang dibakar dengan kerak rangup dan isi yang lembut</p>
     <div class="menu-items">
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Sourdough" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Classic Sourdough</h4>
-          <p>Tangy, chewy artisan bread with a crispy golden crust</p>
-          <div class="menu-item-price">$8.50</div>
+          <h4>Sourdough Klasik</h4>
+          <p>Roti artisan yang sedikit masam, kenyal dengan kerak keemasan yang rangup</p>
+          <div class="menu-item-price">RM8.50</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Baguette" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>French Baguette</h4>
-          <p>Traditional French bread, crispy outside and fluffy inside</p>
-          <div class="menu-item-price">$5.00</div>
+          <h4>Baguette Perancis</h4>
+          <p>Roti tradisional Perancis, rangup di luar dan gebu di dalam</p>
+          <div class="menu-item-price">RM5.00</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Multigrain" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Multigrain Loaf</h4>
-          <p>Hearty whole grain bread packed with seeds and nutrients</p>
-          <div class="menu-item-price">$7.50</div>
+          <h4>Roti Multigrain</h4>
+          <p>Roti bijirin penuh yang padat dengan biji dan khasiat</p>
+          <div class="menu-item-price">RM7.50</div>
         </div>
       </div>
     </div>
@@ -166,31 +166,31 @@ include __DIR__ . '/header.php';
 
   <!-- Cookies Category -->
   <section class="menu-category">
-    <h3>🍪 Cookies & Treats</h3>
-    <p class="category-desc">Sweet, chewy, and irresistible homemade cookies</p>
+    <h3>🍪 Biskut & Pencuci Mulut</h3>
+    <p class="category-desc">Biskut buatan sendiri yang manis, kenyal dan sukar ditolak</p>
     <div class="menu-items">
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Chocolate Chip" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Chocolate Chip Cookies</h4>
-          <p>Classic cookies loaded with premium chocolate chips</p>
-          <div class="menu-item-price">$12.00 / dozen</div>
+          <h4>Biskut Coklat Chip</h4>
+          <p>Biskut klasik penuh dengan kepingan coklat premium</p>
+          <div class="menu-item-price">RM12.00 / dozen</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Oatmeal Raisin" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Oatmeal Raisin</h4>
-          <p>Chewy oatmeal cookies with plump raisins</p>
-          <div class="menu-item-price">$11.00 / dozen</div>
+          <h4>Oatmeal & Kismis</h4>
+          <p>Biskut oat yang kenyal dengan kismis yang penuh</p>
+          <div class="menu-item-price">RM11.00 / dozen</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Double Chocolate" class="menu-item-image">
         <div class="menu-item-content">
           <h4>Double Chocolate</h4>
-          <p>Rich chocolate cookies with white and dark chocolate chunks</p>
-          <div class="menu-item-price">$13.00 / dozen</div>
+          <p>Biskut coklat pekat dengan kepingan coklat putih dan gelap</p>
+          <div class="menu-item-price">RM13.00 / dozen</div>
         </div>
       </div>
     </div>
@@ -198,31 +198,31 @@ include __DIR__ . '/header.php';
 
   <!-- Pastries Category -->
   <section class="menu-category">
-    <h3>🥐 Pastries & Croissants</h3>
-    <p class="category-desc">Buttery, flaky pastries perfect for breakfast or snack</p>
+    <h3>🥐 Pastri & Kroisan</h3>
+    <p class="category-desc">Pastri bermentega dan berlapis, sesuai untuk sarapan atau snek</p>
     <div class="menu-items">
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Butter Croissant" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Butter Croissant</h4>
-          <p>Classic French pastry with delicate layers</p>
-          <div class="menu-item-price">$4.50</div>
+          <h4>Kroisan Mentega</h4>
+          <p>Pastri Perancis klasik dengan lapisan halus</p>
+          <div class="menu-item-price">RM4.50</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Pain au Chocolat" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Pain au Chocolat</h4>
-          <p>Flaky croissant filled with dark chocolate</p>
-          <div class="menu-item-price">$5.00</div>
+          <h4>Kroisan Coklat</h4>
+          <p>Kroisan berlapis yang diisi coklat gelap</p>
+          <div class="menu-item-price">RM5.00</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Almond Croissant" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Almond Croissant</h4>
-          <p>Croissant filled with sweet almond cream</p>
-          <div class="menu-item-price">$5.50</div>
+          <h4>Kroisan Badam</h4>
+          <p>Kroisan diisi krim badam manis</p>
+          <div class="menu-item-price">RM5.50</div>
         </div>
       </div>
     </div>
@@ -230,31 +230,31 @@ include __DIR__ . '/header.php';
 
   <!-- Cakes Category -->
   <section class="menu-category">
-    <h3>🎂 Cakes & Desserts</h3>
-    <p class="category-desc">Decadent cakes and desserts for special occasions</p>
+    <h3>🎂 Kek & Pencuci Mulut</h3>
+    <p class="category-desc">Kek dan pencuci mulut yang mewah untuk majlis khas</p>
     <div class="menu-items">
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Chocolate Cake" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Chocolate Layer Cake</h4>
-          <p>Rich chocolate cake with silky chocolate ganache</p>
-          <div class="menu-item-price">$35.00</div>
+          <h4>Kek Coklat Berlapis</h4>
+          <p>Kek coklat pekat dengan ganache coklat yang lembut</p>
+          <div class="menu-item-price">RM35.00</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Vanilla Cake" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Classic Vanilla Cake</h4>
-          <p>Moist vanilla cake with buttercream frosting</p>
-          <div class="menu-item-price">$32.00</div>
+          <h4>Kek Vanilla Klasik</h4>
+          <p>Kek vanilla lembap dengan lapisan buttercream</p>
+          <div class="menu-item-price">RM32.00</div>
         </div>
       </div>
       <div class="menu-item">
         <img src="<?= url('assets/placeholder.svg') ?>" alt="Carrot Cake" class="menu-item-image">
         <div class="menu-item-content">
-          <h4>Carrot Cake</h4>
-          <p>Spiced carrot cake with cream cheese frosting</p>
-          <div class="menu-item-price">$33.00</div>
+          <h4>Kek Lobak</h4>
+          <p>Kek lobak berempah dengan lapisan krim keju</p>
+          <div class="menu-item-price">RM33.00</div>
         </div>
       </div>
     </div>
@@ -262,10 +262,10 @@ include __DIR__ . '/header.php';
 </div>
 
 <div class="menu-cta">
-  <h3>Ready to Order?</h3>
-  <p>Check our homepage for today's available items or contact us for custom orders</p>
-  <a href="<?= url('/') ?>" class="btn">View Today's Fresh Bakes</a>
-  <a href="<?= url('/order') ?>" class="btn secondary" style="margin-left:10px">Go to Cart</a>
+  <h3>Sedia untuk Memesan?</h3>
+  <p>Semak halaman utama kami untuk item yang tersedia hari ini atau hubungi kami untuk pesanan khas</p>
+  <a href="<?= url('/') ?>" class="btn">Lihat Pastri Artisan Hari Ini</a>
+  <a href="<?= url('/order') ?>" class="btn secondary" style="margin-left:10px">Pergi ke Troli</a>
 </div>
 
 <?php include __DIR__ . '/footer.php'; ?>
